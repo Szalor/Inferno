@@ -19,6 +19,6 @@ It automatically plays Jaraxxus’ iconic “INFERNO!” voice line whenever you
 ## Demo Video
 Here’s a short demonstration of the addon in action:
 
-<video width="480" controls>
-  <source src="./inferno.mp4" type="video/mp4">
-</video>
+[Watch the demo video](https://szalor.github.io/Inferno/inferno.mp4)
+
+
