@@ -1,0 +1,5 @@
+## Interface: 11200
+## Title: Inferno
+## Notes: Plays 'Inferno!' when summoning an Infernal
+## Author: You
+Inferno.lua
