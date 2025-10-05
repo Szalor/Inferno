@@ -1,12 +1,14 @@
-local triggerText = "You cast Inferno."
+local _, playerClass = UnitClass("player")
 
-local frame = CreateFrame("Frame")
-frame:RegisterEvent("CHAT_MSG_SPELL_SELF_BUFF")
-frame:RegisterEvent("CHAT_MSG_SPELL_SELF_DAMAGE")
-frame:RegisterEvent("CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE")
+if playerClass == "WARLOCK" then
+    local frame = CreateFrame("Frame")
+    frame:RegisterEvent("CHAT_MSG_SPELL_SELF_BUFF")
 
-frame:SetScript("OnEvent", function()
-    if arg1 and string.find(arg1, triggerText) then
-        PlaySoundFile("Interface\\AddOns\\Inferno\\inferno.mp3")
-    end
-end)
+	frame:SetScript("OnEvent", function()
+		if not arg1 then return end
+		
+		if string.find(arg1, "You cast Inferno.") then
+			PlaySoundFile("Interface\\AddOns\\Inferno\\inferno.mp3")
+		end
+	end)
+end
